@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.3;
+    }
+    th,
+    td {
+        @apply py-3 px-2.5 text-sm text-left border-y border-gray-200;
+    }
+    thead {
+        @apply bg-neutral-100;
+    }
+    th {
+        @apply font-semibold;
+    }
+    a {
+        @apply text-sky-500 hover:underline;
+    }
+    /* CSS để tùy chỉnh thanh cuộn */
+    .custom-scroll::-webkit-scrollbar {
+        width: 8px; /* Độ rộng của thanh cuộn */
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+        background-color: #5b5b5b; /* Màu sắc của nút cuộn */
+        border-radius: 4px; /* Bo tròn nút cuộn */
+    }
+
+    .custom-scroll::-webkit-scrollbar-track {
+		/* Màu sắc của vùng cuộn */
+        /* background-color: #F3F4F6;  */
+        border-radius: 4px; /* Bo tròn vùng cuộn */
+    }
+
+    /* Ẩn thanh cuộn khi không trỏ vào */
+    .custom-scroll {
+        scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+        width: 0; /* Ẩn thanh cuộn trên Chrome và Safari */
+    }
+
+    /* Hiển thị thanh cuộn khi trỏ vào */
+    .custom-scroll:hover {
+        scrollbar-width: thin; /* Hiển thị thanh cuộn trên Firefox */
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+        width: 8px; /* Hiển thị thanh cuộn trên Chrome và Safari */
+    }
+}
