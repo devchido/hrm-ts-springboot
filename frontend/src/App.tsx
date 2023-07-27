@@ -3,6 +3,7 @@ import NotFound from './pages/NotFound';
 import About from './pages/About';
 import Layout from './layout/Layout';
 import Dashboard from './pages/Dashboard';
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
+          <Route path="products" element={<Products />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
